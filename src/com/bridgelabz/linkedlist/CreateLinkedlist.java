@@ -34,12 +34,14 @@ public class CreateLinkedlist {
         mySecondNode.next=myThirdNode;
 
 
+
         insertNodeBetween(myFirstNode,mySecondNode,myThirdNode);
 
         LinkedList<MyNode> l1 = new LinkedList<>();
         l1.add(myFirstNode);
         l1.add(mySecondNode);
         l1.add(myThirdNode);
+        pop(l1);
 
         System.out.println("LinkedList " + getNodeSequence(l1));
     }
@@ -51,6 +53,11 @@ public class CreateLinkedlist {
 
     }
 
+
+    private static void pop(LinkedList<MyNode> linkedList)
+    {
+        linkedList.removeFirst();
+    }
 
     private  static String getNodeSequence(LinkedList<MyNode> linkedList)
     {
