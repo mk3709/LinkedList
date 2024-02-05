@@ -54,9 +54,13 @@ public class CreateLinkedlist {
     }
 
 
-    private static void pop(LinkedList<MyNode> linkedList)
+//   // private static void pop(LinkedList<MyNode> linkedList)
+//    {
+//        linkedList.removeFirst();
+//    }
+    private static  void pop(LinkedList<MyNode> LinkedList)
     {
-        linkedList.removeFirst();
+        LinkedList.removeLast();
     }
 
     private  static String getNodeSequence(LinkedList<MyNode> linkedList)
