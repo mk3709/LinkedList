@@ -25,10 +25,11 @@ class MyNode{
 public class CreateLinkedlist {
     public static void main(String[] args) {
 
-        MyNode   myFirstNode = new MyNode(70);
+        MyNode   myFirstNode = new MyNode(56);
         MyNode   mySecondNode = new MyNode(30);
-        MyNode   myThirdNode = new MyNode(56);
+        MyNode   myThirdNode = new MyNode(70);
 
+        //56-30->70
         myFirstNode.next=mySecondNode;
         mySecondNode.next=myThirdNode;
 
@@ -53,5 +54,7 @@ public class CreateLinkedlist {
 
       sequence.delete(sequence.length()-2,sequence.length());
       return sequence.toString();
-}
+
+    }
+
 }
