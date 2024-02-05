@@ -34,6 +34,8 @@ public class CreateLinkedlist {
         mySecondNode.next=myThirdNode;
 
 
+        insertNodeBetween(myFirstNode,mySecondNode,myThirdNode);
+
         LinkedList<MyNode> l1 = new LinkedList<>();
         l1.add(myFirstNode);
         l1.add(mySecondNode);
@@ -41,6 +43,14 @@ public class CreateLinkedlist {
 
         System.out.println("LinkedList " + getNodeSequence(l1));
     }
+
+    private  static void insertNodeBetween(MyNode previousNode,MyNode newNode,MyNode nextNode)
+    {
+        previousNode.next=newNode;
+        newNode.next=nextNode;
+
+    }
+
 
     private  static String getNodeSequence(LinkedList<MyNode> linkedList)
     {
