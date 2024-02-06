@@ -1,8 +1,6 @@
 package com.bridgelabz.linkedlist;
 import java.util.LinkedList;
 
-
-
 class MyNode{
     int data;
      MyNode next;

@@ -1,4 +1,7 @@
 package com.bridgelabz.linkedlist;
+
+
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.testng.AssertJUnit.assertEquals;
@@ -22,6 +25,8 @@ public class LinkedListSearchTest {
 
         list.insertAfter(node30, 40);
 
+
+        list.delete(40);
 
         MyNode current = list.head;
         while (current != null) {
