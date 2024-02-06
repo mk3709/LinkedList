@@ -1,6 +1,8 @@
 package com.bridgelabz.linkedlist;
 import java.util.LinkedList;
 
+
+
 class MyNode{
     int data;
      MyNode next;
@@ -32,9 +34,6 @@ public class CreateLinkedlist {
         //56-30->70
         myFirstNode.next=mySecondNode;
         mySecondNode.next=myThirdNode;
-
-
-
         insertNodeBetween(myFirstNode,mySecondNode,myThirdNode);
 
         LinkedList<MyNode> l1 = new LinkedList<>();
@@ -42,10 +41,33 @@ public class CreateLinkedlist {
         l1.add(mySecondNode);
         l1.add(myThirdNode);
         pop(l1);
-
         System.out.println("LinkedList " + getNodeSequence(l1));
     }
 
+    private MyNode head;
+
+    public void insert(int data) {
+        MyNode newNode = new MyNode(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            MyNode temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+    }
+        public MyNode search (int key){
+            MyNode current = head;
+            while (current != null) {
+                if (current.data == key) {
+                    return current;
+                }
+                current = current.next;
+            }
+            return null;
+        }
     private  static void insertNodeBetween(MyNode previousNode,MyNode newNode,MyNode nextNode)
     {
         previousNode.next=newNode;
@@ -58,10 +80,14 @@ public class CreateLinkedlist {
 //    {
 //        linkedList.removeFirst();
 //    }
+
     private static  void pop(LinkedList<MyNode> LinkedList)
     {
         LinkedList.removeLast();
     }
+
+
+
 
     private  static String getNodeSequence(LinkedList<MyNode> linkedList)
     {
