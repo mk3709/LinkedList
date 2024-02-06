@@ -6,6 +6,7 @@ import static org.testng.AssertJUnit.assertNotNull;
 
 public class LinkedListSearchTest {
     @Test
+
     public void testSearch() {
         CreateLinkedlist list = new CreateLinkedlist();
 
@@ -19,7 +20,13 @@ public class LinkedListSearchTest {
         assertNotNull("Node with value 30 should be found", node30);
         assertEquals("Found node should have data value 30", 30, node30.data);
 
-        // Test searching for node with value 100 (not present)
-        MyNode node100 = list.search(100);
+        list.insertAfter(node30, 40);
+
+
+        MyNode current = list.head;
+        while (current != null) {
+            System.out.print(current.data + "->");
+            current = current.next;
+        }
     }
 }
